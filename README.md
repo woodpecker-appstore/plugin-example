@@ -43,8 +43,39 @@ CAS反序列化漏洞的利用框架
 - Exploit模块可对有漏洞的网站进行精准打击
 - Payload模块可生成payload，进行手工测试
   
-## 框架入口
+## 编写入门
 
+### 创建项目
+
+
+新建一个模块，选择quickstart 或者添加一个archetype
+
+![](pic/2021-05-04_15-49.png)
+
+设置artifact的groupID，artifactID和version
+
+![](pic/2021-05-04_15-50.png)
+
+在pom.xml中添加dependency
+
+pom.xml
+```xml
+    <dependency>
+      <groupId>me.gv7.woodpecker</groupId>
+      <artifactId>woodpecker-sdk</artifactId>
+      <version>0.2.1</version>
+      <scope>compile</scope>
+    </dependency>
+```
+
+![](pic/2021-05-04_15-52.png)
+
+创建WoodpeckerPluginManager.java
+
+![](pic/2021-05-04_15-58.png)
+
+![](pic/2021-05-04_15-52_1.png)
+### 框架入口
 漏洞编写，需从框架入口开始
 
 me/gv7/woodpecker/plugin/WoodpeckerPluginManager.java
