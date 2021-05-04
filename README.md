@@ -12,8 +12,38 @@ woodpecker 漏洞插件开发的简单示范，用于插件的快速上手
     - Exploit 漏洞深度利用接口，插件通过实现该接口，可实现对漏洞各种深度利用
     - Poc     插件可以实现这个接口来对漏洞进行精准检测和批量扫描
     - Payload 荷载生成器接口，插件通过实现该接口，可生成各种类型payload
+
+## 最佳实践
+
+### InfoDetector
+https://github.com/woodpecker-appstore/weblogic-infodetector
+
+Weblogic信息探测插件,可用于
+
+- 探测版本
+- 探测t3协议是否开启
+- 探测iiop协议是否开启
+- 探测console是否存在
+- 探测async组件是否存在
+- 探测wls-wsat组件是否存在
+- 探测bea_wls_internal组件是否存在
+- 探测bea_wls_deployment_internal组件是否存在
+
+### Helper
+https://github.com/woodpecker-appstore/BCELConverter
+
+BCELConverter可以方便的将java class转换成BCEL字符串，将BCEL字符串转换为java class
+
+###  Exploit
+https://github.com/woodpecker-appstore/apereo-cas-vuldb
+
+CAS反序列化漏洞的利用框架
+
+- Poc模块可用于批量漏洞的检测
+- Exploit模块可对有漏洞的网站进行精准打击
+- Payload模块可生成payload，进行手工测试
   
-# 框架入口
+## 框架入口
 
 漏洞编写，需从框架入口开始
 
